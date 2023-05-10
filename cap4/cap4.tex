@@ -1,0 +1,325 @@
+\chapter{ANÁLISIS PRELIMINAR} \label{cap:AnalisisPreliminar}
+\section{El fenómeno didáctico}
+Un fenómeno didáctico identificado en la formación de los no especialistas, específicamente de los ingenieros formados en el Politécnico Grancolombiano, es la falta de conexiones entre las matemáticas enseñadas y las matemáticas utilizadas en la investigación y en los lugares de trabajo. En las carreras ingenieriles, los cursos iniciales se enfocan en presentar definiciones y propiedades, y proponen trabajar con una lista de técnicas que privilegian la memorización y el dominio de algoritmos, por ejemplo, en el curso de Álgebra Lineal, al analizar las soluciones de los sistemas de ecuaciones lineales se suele emplear el método Gauss-Jordan para encontrar las soluciones (si existen), o al estudiar las matrices se enseñan los diferentes algoritmos para hallar el determinante de una matriz, la matriz inversa, los valores y vectores propios, entre otros. En otras palabras, estos cursos se enmarcan en el paradigma de la visita de obras y monumentalización del saber \parencite{Chevallard2015}. Aunque el curso virtual de Álgebra Lineal en el que se implementó el \rei{} comparte la mayoría de las características de este paradigma, durante las semanas 3, 4 y 5 se desarrolla un ``proyecto'' en equipos que pretende aplicar los conocimientos estudiados durante las primeras cuatro semanas en una situación problemática bajo una visión aplicacionista de las matemáticas \parencite{Barquero2014}. El profesor tiene la libertad de diseñar el proyecto, por lo que es posible integrar el estudio de modelos matemáticos como una introducción a la modelización matemática. Sin embargo, este proyecto no se suele relacionar con temas de ingeniería, difícilmente los profesores conocen la forma en que los modelos matemáticos son utilizados en otros cursos y eso hace que lo que se enseñe caiga en el riesgo de no ser relevante para los estudiantes, futuros ingenieros o profesionistas. Volviendo a los ejemplos anteriores, los estudiantes pueden dominar el método de Gauss-Jordan, pero no ver su relevancia en el análisis de sistemas de ecuaciones lineales y la forma en que podría ser utilizado al resolver problemas de ingeniería, no se logra ver la importancia de los modelos matriciales, cómo el contexto y sus propios conocimientos deben tomarse en cuenta para utilizarlos. El proyecto debe verse más allá de una \textit{aplicación } directa de los contenidos que se han estudiado, requiere un trabajo amplio de reconocimiento del problema, de situaciones ingenieriles, y de la forma en que puede ser replanteado para resolverlo utilizando elementos del álgebra matricial.
+
+En otras palabras, la creación de conexiones entre las matemáticas enseñadas y las matemáticas utilizadas en las instituciones usuarias requiere un cambio del modelo epistemológico. Es por esto que este análisis preliminar se inició con identificar una práctica puntual de la institución usuaria que se puede relacionar con los temas y resultados de aprendizaje del microcurrículo del curso. 
+
+El método conocido como la separación ciega de fuentes (o \textit{blind sourse separation}: BSS) ha sido trabajado en investigaciones anteriores \parencite{Romo-VazquezA2012, Vazquez_2016} donde se analizó la praxeología de modelización matemática BSS (P-BSS), se diseñaron e implementaron actividades didácticas en un curso de Álgebra Lineal con estudiantes de segundo semestre en una universidad mexicana \parencite{Vazquez2017}. En la presente tesis, se profundizó el análisis de BSS en bioingeniería con la colaboración de un experta y se identificó una praxeología de BSS más específica que la que se mostró en \textcite{Vazquez2017}. Luego, en esta investigación, se realizó la transposición de la P-BSS a la praxeología escolar (Pe-BSS), específicamente a la asignatura virtual de Álgebra Lineal de primer año de formación.
+
+
+\section{Modelo Epistemológico de Referencia}
+El Modelo Epistemológico de Referencia (MER), entendido como modelo teórico que justifica y analiza la transición y evolución de los saberes y praxeologías entre la institución usuaria y la institución de enseñanza, surge como alternativa al modelo epistemológico dominante de la enseñanza clásica, permitiendo construir un modelo didáctico alternativo que permite interpretar el conocimiento matemático y fundamentar cómo se puede organizar su estudio en la institución de enseñanza.
+
+El MER se materializa como el conjunto de praxeologías regionales y locales de modelización matemática de la BSS (P-BSS) y su transposición a las praxeologías locales de modelización matemática en la enseñanza del Álgebra Lineal (Pe-BSS). A continuación se realiza un análisis praxeológico de la praxeología regional de modelización matemática BSS desarrollada desde la institución usuaria y una propuesta de su transposición a una praxeología regional de modelización matemática escolar para construirse en un curso de Álgebra Lineal.
+
+
+\section{La Praxeología de modelización matemática BSS}
+
+El ejemplo clásico para entender la BSS es el conocido como ``\textit{cocktail party problem}'': supongamos que nos encontramos en una reunión donde hay diferentes sonidos, como las voces de personas hablando al mismo tiempo, la música de fondo y el sonido del exterior; nuestro interés es escuchar solamente a la persona con la que estamos dialogando pero recibimos una mezcla de todos los sonidos que están a nuestro alrededor, el cerebro procesa el sonido, identifica y separa la voz de quien queremos escuchar. 
+
+Un modelo matemático de esta situación se puede ver como $m$ receptores que reciben información de $n$ fuentes en $t$ intervalos de tiempo, el problema consiste en separar y recuperar la información de las fuentes conociendo solamente las señales mezcladas dadas por los receptores.
+
+Este ejemplo muestra el inicio de un gran campo de aplicaciones en diferentes áreas, especialmente en la biomedicina, procesamiento de señales acústicas, procesamiento de imágenes, ciencias de la tierra, econometría y minería de datos de texto \parencite{Yu2014, Comon2010}. Así, la BSS es un poderoso método para el análisis y el procesamiento de datos, permitiendo el estudio de diferentes tareas que involucren a los estudiantes en el trabajo con aplicaciones provenientes de diversas disciplinas.
+
+El análisis praxeológico de la BSS se realizó considerando diferentes fuentes: artículos de investigación \parencite{Hyvarinen1999, Langlois2010, Romo-VazquezA2012, Romo-VazquezR2012, Vazquez_2016}, artículos de divulgación \parencite{Antonov2016, Caiafa2011, Langlois2010}, libros científicos \parencite{Comon2010, Yu2014, Stone2004}; sugeridos principalmente por la experta en las aplicaciones de la BSS que fue consultada, también se revisaron micro-currículos universitarios, textos universitarios \parencite{Kolman2007, Grossman2012, Lay2015, Larson2017} y software matemático. La revisión de las fuentes permitió identificar los campos de aplicación de la BSS, los diferentes métodos utilizados para procesar, blanquear, analizar y separar las señales y las diferencias entre estos. A continuación se muestran los resultados del análisis que permiten la construcción de un MER elemental de la BSS.
+
+En \textcite{Comon2010, Yu2014} se presentan los inicios de la BSS; la separación de fuentes fue formulada en 1984 en el estudio del modelado neural del movimiento en vertebrados. Posteriormente,  \textcite{Herault_1986} presentan el algoritmo H-J para separar dos fuentes mezcladas estadísticamente independientes, el cual da comienzo a una amplia gama de métodos que se han desarrollado y mejorado hasta la actualidad.
+
+Una situación sencilla que ejemplifica el problema de separación es cuando se tiene $\mathbf{x}(k)$ como un conjunto de señales lineales mezcladas tal que $\mathbf{x}(k)=A\cdot\mathbf{s}(k)$, donde $A$ es la matriz de mezcla y $\mathbf{s}(k)$ son las señales fuentes. El problema de la BSS se reduce a calcular una matriz $W$ que:
+$$\mathbf{y}(k)=W\cdot\mathbf{x}(k)\approx\mathbf{s}(k)$$
+donde $\mathbf{y}(k)$ es una estimación de las fuentes. Este modelo se ilustra en la figuras \ref{fig3.1} y \ref{fig3.2}. 
+
+\begin{figure}[h]
+	\caption{Módulo de procesamiento para un problema general de la BSS}
+	\centering
+	\includegraphics[width=8cm]{cap4/fig01}\\
+	\small \raggedright \footnotesize \textit{Fuente}: \textcite[p. 2]{Yu2014}, permanece en su idioma original.
+	\label{fig3.1}
+\end{figure}
+
+\begin{figure}[h]
+	\caption{Diagrama de procesamiento detallado un problema de la BSS}	
+	\centering
+	\includegraphics[width=12cm]{cap4/fig02}\\
+	\small \raggedright \footnotesize \textit{Fuente}: \textcite[p. 3]{Yu2014}, permanece en su idioma original.
+	\label{fig3.2}
+\end{figure}
+
+Resolver el problema BSS ha mostrado ser una compleja tarea cuya dificultad consiste en el desconocimiento de las fuentes, sus características y la forma en que se mezclan, por ejemplo, el algoritmo presentado por \textcite{Herault_1986} se basa en la hipótesis de que las señales son estadísticamente independientes y que la distribución estadística es conocida. En la figura \ref{fig3.5} \textcite{Yu2014} categoriza los diferentes algoritmos de la BSS acorde a cuatro métodos que se basan en algún conocimiento \textit{a priori} de las fuentes.
+
+\begin{figure}[H]
+	\caption{Métodos de BSS usando algún conocimiento previo}\label{fig3.5}
+	\centering
+	\includegraphics[width=11cm]{cap4/fig05}\\
+	\small \raggedright \footnotesize \textit{Fuente}: \textcite[p. 46]{Yu2014}, permanece en su idioma original.
+\end{figure}
+
+Así mismo, en \textcite{Yu2014} se identifican tres algoritmos matemáticos generales que abordan los diferentes estilos de mezcla de señales: los \textit{modelos de mezcla lineal instantáneos}, los \textit{modelos de mezcla lineal convolutivos} y los \textit{modelos de mezcla no lineal}. Esto da un panorama general de los tipos de tareas que se pueden identificar en la BSS que pasan por materias fundamentales como el Álgebra Lineal o Estadística hasta las del ciclo de profundización. Ya que nuestro interés se centra en reconstruir praxeologías del Álgebra Lineal, se escoge el algoritmo de \textit{mezcla lineal instantáneo}.
+
+\subsection{El modelo de mezcla lineal instantáneo}
+
+Un modelo típico de BSS se puede expresar con la ecuación matricial
+$$\mathbf{X}=\mathbf{A}\mathbf{S}+\mathbf{N}$$
+donde $\mathbf{X}$ son los datos recibidos, partiendo de las fuentes mezcladas $\mathbf{S}$ por medio de la matriz $\mathbf{A}$ y a las cuales se le adiciona un ruido $\mathbf{N}$ dado por los instrumentos de medida. Si el modelo es \textit{instantáneo}, es decir, si los sensores están recibiendo datos discretamente $t=1,2,...,T$, entonces se puede plantear la ecuación vectorial:
+$$\mathbf{x}(t)=\mathbf{A} \mathbf{s}(t)+\mathbf{n}(t)$$
+
+Los modelos de mezcla se relacionan con los tipos de algoritmos: ICA (\textit{independent 	component analysis}), NMF (\textit{nonnegative matrix factorization}) y SCA (\textit{sparse component analysis}) que a su vez están relacionados con el conocimiento previo de las fuentes: según la independencia estadística, las características de dispersión y las restricciones no negativas.
+
+La figura \ref{fig3.3} muestra los pasos generales para extraer componentes importantes de las señales, donde la BSS es un paso intermedio, después que se han ``limpiado'' los datos, aquí se evidencia que el \textit{pre-procesamiento} y \textit{post-procesamiento} de las señales son pasos esenciales para una correcta recuperación y/o extracción.
+
+\begin{figure}[H]
+	\caption{Pasos básicos para una eficiente descomposición y extracción de una señal basados en los métodos de la BSS}\label{fig3.3}
+	\centering
+	\includegraphics[width=15cm]{cap4/fig03}\\
+	\small \raggedright \footnotesize \textit{Fuente}: \textcite[p. 3]{Yu2014}, permanece en su idioma original.
+\end{figure}
+
+En \textcite{Stone2004} se muestra la relación entre el ICA con otros métodos convencionales para analizar grandes conjuntos de datos, por ejemplo, el PCA (\textit{principal component analysis}) y el FA (\textit{factor analysis}), estos métodos se usan para encontrar un conjunto de datos con propiedades diferentes a la independencia. Específicamente, el PCA es un método que se utiliza para el blanqueamiento de la señal, el cual involucra praxeologías matemáticas referentes al Álgebra Lineal, como encontrar valores y vectores propios, y la Estadística, como normalizar datos. 
+
+\subsection{El principio del ICA}
+
+El análisis de componentes principales es un método de BSS que intenta expresar un conjunto de variables aleatorias mezcladas como una combinación lineal de variables \textit{estadísticamente independientes}, sin tener información de las fuentes que las originan ni la matriz de mezcla.
+
+Desde el punto de vista matemático la independencia estadística de una variable aleatoria se puede definir mediante la función de probabilidad de densidad (PDF): dos variables aleatorias $x$ y $y$ son estadísticamente independientes si y solo si la PDF conjunta puede expresarse como el producto marginal de las PDF independientes:
+$$p_{x,y}(x,y)=p_x(x)p_y(y)$$
+
+El método no da información sobre la varianza de la señal original ni la multiplicidad de la misma, es decir, no se garantiza la reproducción exacta y las señales recuperadas pueden tener diferente magnitud, signo y varianza.  Adicionalmente, el método no restaura las señales en el mismo orden dado de las fuentes.
+
+\begin{figure}[h]
+	\caption{ICA en pocas palabras}\label{fig3.4}
+	\centering
+	\includegraphics[width=17cm]{cap4/fig04}\\		
+	\small \raggedright \textit{Fuente}: elaboración propia.
+\end{figure}
+
+Matemáticamente el problema se puede formular a partir de $n$ señales observadas $X(t)=\{x_1(t),x_2(t),...,x_n(t)\}$ generadas por una cantidad de fuentes donde se espera extraer las fuentes desconocidas $Y(t)=\{y_1(t),y_2(t),...,y_m(t)\}$ y $t=1,2,...T$ representa la medida de las observaciones \textit{instantáneas}, la relación se puede escribir como la combinación lineal:
+$$y_j(t)=\d \sum_{i-1}^{n} \omega_{ij} x_i(t),\ \ \ \ i=1,2,...,n;\ \ j=1,2,...,m$$
+que puede verse en forma matricial:
+\begin{equation*}\label{eq1}
+	\left(
+	\begin{array}{c}
+	y_1(t) \\
+	\vdots  \\
+	y_m(t) \\
+	\end{array}
+	\right)=\left(
+	\begin{array}{ccc}
+	\omega_{11}  & \cdots  & \omega_{1n}  \\
+	\vdots  & \ddots & \vdots  \\
+	\omega_{m1}  & \cdots  & \omega_{mn} \\
+	\end{array}
+	\right) \left(
+	\begin{array}{c}
+	x_1(t) \\
+	\vdots  \\
+	x_n(t) \\
+	\end{array}\right)
+\end{equation*}
+\begin{equation*}
+	Y=W\cdot X
+\end{equation*}
+El problema consiste en encontrar una transformación matricial $W$ que haga un mapeo de los elementos $x_i$ de dimensión $n$ a los elementos $y_j$ de dimensión $m$. 
+
+\subsubsection{Condiciones}
+En las fuentes analizadas \parencite{Yu2014, Stone2004, Comon2010, Caiafa2011} se resaltan condiciones necesarias para que el método ICA funcione, dependiendo de la naturaleza del documento analizado (investigación, divulgación, proyecto de grado) las condiciones se modifican y adaptan al desarrollo de cada uno. Por ejemplo, en \textcite[p. 67]{Yu2014} se proponen cinco condiciones; a partir de considerar que se tienen $m$ fuentes: $S(t)=\{s_1(t),s_2(t),...,s_m(t)\}$ y $n$ señales mezcladas: $X(t)=\{x_1(t),x_2(t),...,x_n(t)\}$ por medio de la matriz de mezcla $A_{n \times m}$ entonces se debe cumplir con:
+\begin{enumerate}
+	\item \textbf{Independencia estadística}: las fuentes $s_m(t)$ están normalizadas y son estadísticamente independientes. 
+	\item \textbf{Relación entre las señales observadas y las fuentes}: El número de fuentes $m$ debe ser menor o igual que el número señales observadas $n$ ($m\leq n$). Cuando $m=n$ la matriz es cuadrada y si se asume que su rango está completo, entonces $A^{-1}$ existe y $W=A^{-1}$.
+	\item \textbf{Funciones de probabilidad no Gaussianas}: Solamente una fuente puede tener distribución de probabilidad Gaussiana; si hay más de una no se garantiza la separación.
+	\item \textbf{Libre de ruido}: Se asume que el experimento está libre de ruido o que el ruido que se introduce al sistema es muy pequeño y despreciable.
+	\item \textbf{Conocimiento de las fuentes}: Se debe tener algún conocimiento a prior sobre las funciones de distribución de probabilidad de las fuentes. 
+\end{enumerate}
+
+\subsection{Software matemático}
+Se identificaron varios software que permiten aplicar los algoritmos matemáticos necesarios para limpiar, separar y procesar las fuentes: \textit{Matlab} es el software usado en la mayoría de artículos y sitios de divulgación científica, en general, se utilizan librerías independientes que se pueden descargar de manera libre. Otros software, como \textit{Wolfram Mathematica}, y lenguajes de programación como \textit{Python} y \textit{R} también brindan excelentes resultados en el momento de aplicar los algoritmos matemáticos para el procesamiento de datos y en las comunidades científicas circulan las librerías necesarias para aplicar  los diferentes métodos (\url{https://research.ics.aalto.fi/ica/fastica/}).
+
+En este proyecto se decidió trabajar principalmente con \textit{Python} usando \jupy{} como interfaz, debido principalmente a las potencialidades que ofrece su lenguaje de programación, el uso de diferentes librerías, a que es un software libre y está siendo cada vez más utilizado en las comunidades científicas ingenieriles. En \jupy{} se desarrollaron los cuadernos en que los estudiantes utilizaron en el \rei, los paquetes utilizados para el método ICA fueron adaptados de \parencite{Antonov2016, Langlois2010}. 
+
+
+\subsection{Las praxeologías locales del modelo BSS analizado}
+El análisis de la BSS la ubicó como una praxeología regional y permitió identificar diferentes praxeologías locales de modelización matemática, asociadas a las instituciones usuarias y de enseñanza. Recapitulando, una praxeología se descompone en: \textbf{tipos de tarea} ($T$); el \textbf{conjunto de técnicas} ($\tau$) que permiten desarrollarlas; justificaciones de las técnicas, llamadas \textbf{tecnologías} ($\theta$) que a su vez son justificadas mediante la \textbf{teoría} ($\Theta$). A continuación se describen algunas de las praxeologías identificadas locales identificadas en el referente de la praxeología BSS. 
+
+\subsubsection{Respecto a la institución usuaria: separación de fuentes}
+
+\begin{multicols}{2}
+\paragraph{\textit{$P_{U1}$}: normalización de las señales} 
+Praxeología asociada la \textit{pre procesamiento} de señales
+\begin{itemize}
+	\item $T$: \textbf{normalizar} un conjunto de datos
+	\item $\tau$: \textbf{media cero:} Encontrar la \textit{media} de los datos y restarla a cada uno\\
+	\textbf{varianza uno:} Encontrar la \textit{varianza} de los datos y dividirla a cada uno
+	\item $\theta^{m}$: la media y varianza son medidas estadísticas que se usan para comparar diferentes tipos de datos entre sí
+	\item $\theta^{i}$: permite trabajar con diferentes tipos de medidas estandarizadas
+	\item $\Theta$: Estadística, existencia de la media y varianza para cualquier conjunto de datos numérico
+\end{itemize}
+
+\paragraph{\textit{$P_{U2}$}: análisis de componentes principales (PCA)} 
+Praxeología asociada al \textit{pre procesamiento} de señales
+\begin{itemize}
+	\item $T$: \textbf{encontrar} las componentes principales de un conjunto de datos
+	\item $\tau$: hallar los vectores y valores propios de un conjunto de datos previamente normalizado y escoger aquellos que contengan la mayor información del conjunto
+	\item $\theta^{m}$: toda matriz tiene un espacio propio, el cuál está compuesto por los vectores y valores propios
+	\item $\theta^{i}$: el método PCA se aplica para reducir la dimensión de las variables de un conjunto de datos
+	\item $\Theta$: método PCA, Álgebra Lineal
+\end{itemize}
+
+\paragraph{\textit{$P_{U3}$}: separación de señales de diferente naturaleza conociendo la matriz de mezcla} 
+Praxeología asociada al estudio de las señales fuentes 
+\begin{itemize}
+	\item $T$: separar un conjunto de señales mezcladas conociendo la matriz de mezcla
+	\item $\tau$: encontrar la matriz inversa de la matriz de mezcla y multiplicarla por el vector de las mezclas
+	\item $\theta^{m}$: este tipo de separación se puede ver como una ecuación matricial con una matriz de coeficientes cuadrada. Si el determinante es diferente de cero, se puede utilizar la matriz inversa para resolver la ecuación
+	\item  $\theta^{i}$: el método ICA se aplica para identificar las componentes independientes de un conjunto de datos, en este caso, separa las señales mezcladas resultando las señales iniciales
+	\item $\Theta$: método ICA, sistemas de ecuaciones lineales y ecuaciones matriciales
+\end{itemize}
+
+\end{multicols}
+
+\subsubsection{Respecto a la institución de enseñanza: Álgebra Lineal}
+Las praxeologías locales de modelización matemática asociadas al Álgebra Lineal tienen relación con aquellas estudiadas en la institución usuaria, se identificaron contenidos de la asignatura como los siguientes: sistemas de ecuaciones lineales, ecuaciones vectoriales y matriciales, matrices, matriz inversa y transformaciones matriciales como praxeologías que se pueden transponer a las instituciones de enseñanza y que forman parte del currículo tradicional de la asignatura.
+\begin{multicols}{2}
+\paragraph{\textit{$P_{E1}$}: resolución de sistemas de ecuaciones lineales, ecuaciones vectoriales y/o matriciales} 
+\begin{itemize}
+	\item $T$: \textbf{resolver} un sistema de ecuaciones lineales
+	\item $\tau$: \textbf{si existe el determinante y es diferente cero:} encontrar la matriz inversa y multiplicarla por el vector\\
+	\textbf{en otro caso:} reducir la matriz de coeficientes ampliada $[A|b]$ e interpretar la matriz reducida para determinar si existen infinitas soluciones o si el sistema no tiene solución
+	\item $\theta$: método de Gauus-Jordan, Teorema de la Matriz Inversa
+	\item $\Theta$: teoría del álgebra de matrices, solución de sistemas de ecuaciones lineales
+\end{itemize}
+
+\paragraph{\textit{$P_{E2}$}: multiplicación de matrices} 
+\begin{itemize}
+	\item $T$: \textbf{multiplicar} dos matrices
+	\item $\tau$: identificar renglones y columnas de cada una y operar de acuerdo a la definición de multiplicación de vectores
+	\item $\theta$: multiplicación de vectores
+	\item $\Theta$: teoría del álgebra de matrices
+\end{itemize}
+
+\paragraph{\textit{$P_{E3}$}: encontrar la combinación lineal de un conjunto de vectores} 
+\begin{itemize}
+	\item $T$: \textbf{encontrar} la combinación lineal de dos o más vectores
+	\item $\tau$: multiplicar cada vector uno por un múltiplo constante diferente y sumar los productos
+	\item $\theta$: combinación lineal
+	\item $\Theta$: teoría del álgebra de matrices
+\end{itemize}
+
+\paragraph{\textit{$P_{E4}$}: determinar la independencia lineal de un conjunto de vectores} 
+\begin{itemize}
+	\item $T$: \textbf{determinar} si un conjunto de vectores es linealmente independiente.
+	\item $\tau$: resolver la ecuación matricial asociada 
+	\item $\theta$: encontrando la inversa o reduciendo la matriz de coeficientes ampliada $[A|b]$ e interpretando la matriz reducida para determinar si existen infinitas soluciones o ninguna. Método de Gauus-Jordan, Teorema de la matriz inversa
+	\item $\Theta$: teoría del álgebra de matrices
+\end{itemize}
+
+\paragraph{\textit{$P_{E5}$}: transformaciones matriciales} 
+\begin{itemize}
+	\item $T$: \textbf{transformar} un vector por medio de un matriz
+	\item $\tau$: multiplicar el vector por la matriz
+	\item $\theta$: las columnas de la base deben coincidir con los renglones del vector, esto determina la dimensión del vector transformado
+	\item $\Theta$: teoría del álgebra de matrices, espacios vectoriales
+\end{itemize}
+\vspace{3cm}
+\paragraph{\textit{$P_{E6}$}: definición de la matriz inversa} 
+\begin{itemize}
+	\item $T$: \textbf{encontrar} la matriz inversa de una matriz dada
+	\item $\tau$: calcular el determinante y si es diferente de cero aplicar el algoritmo respectivo
+	\item $\theta$: toda matriz cuadrada tiene determinante que garantiza la existencia de la inversa
+	\item $\Theta$: teoría del álgebra de matrices
+\end{itemize}
+\end{multicols}
+
+El análisis preliminar evidenció la estrecha relación entre las praxeologías locales de la institución usuaria y de la enseñanza, se escoge a $P_{U3}$ como la praxeología a construir en la escuela por medio de las praxeologías locales $P_{E1}$, $P_{E2}$, $P_{E3}$, $P_{E4}$ y $P_{E5}$, teniendo en cuenta que aquí solo se señalaron algunas de las que se pueden vincular directamente con las temáticas iniciales del microcurrículo de la asignatura. Si bien no se trabajó con el preprocesamiento de las señales ($P_{U1}$, $P_{U2}$), la construcción de estas praxeologías dejan abierta la posibilidad de construir otros diseños enfocados a diferentes asignaturas. En otras palabras, este análisis permite, a partir de las praxeologías puntuales identificadas en la institución usuaria, el desarrollo de praxeologías locales pertenecientes a varias asignaturas del ciclo de formación inicial en las carreras de ingeniería, por ejemplo, Álgebra Lineal, Cálculo, Estadística y Probabilidad
+
+
+\section{La P-BSS en el procesamiento de señales}
+
+En el análisis praxeológico se identificaron praxeologías de modelización matemática utilizadas en el procesamiento de señales con componentes tecnológicos justificados por las instituciones productoras de saber matemático $P(M)$ y por las de disciplinas intermedias $P(DI)$ que a su vez están relacionadas con praxeologías de modelización matemática trabajadas en las instituciones de enseñanza matemática $E(M)$.
+
+Para esta investigación se decidió elaborar una praxeología basada en el modelado inverso, ya que generalmente la BSS se usa en situaciones en las que no se conocen las fuentes que se mezclan ni la forma en que se mezclaron (\textbf{tipo de tarea}). El caso ideal es tener el mismo número de fuentes y captadores (observaciones). La \textbf{técnica} utilizada para separar este tipo de mezcla se basa en el modelo matricial, $\mathbf{x}=A\mathbf{s}$, donde $\mathbf{x}$ representa las señales mixtas registradas por los sensores, $A$ es la matriz de mezcla y $\mathbf{s}$ representa las fuentes. La tarea consiste en recuperar las fuentes de origen, $\mathbf{s}$ (desconocido), mediante una matriz de separación, $B$ que, en el caso ideal, corresponde a la inversa exacta de la matriz, $A$ ($B=A^{-1}$), de modo que se produce un modelo de separación, $\mathbf{y}=B\mathbf{x}$, en el que $\mathbf{y}$ representa las fuentes estimadas, que se espera que muestren una gran similitud con las fuentes originales $\mathbf{A}$. La \textbf{tecnología }está enmarcada por varios algoritmos BSS que se utilizan para obtener la matriz de separación $B$, incluidos FastICA \parencite{Hyvarinen1999} y SOBI \parencite{Belouchrani1997}, entre otros. El bloque teórico ($\theta,\Theta$) se basa en nociones extraídas del Álgebra Lineal (por ejemplo, matrices, transformación de matrices, inversa de una matriz, linealidad, etc.) y procesamiento de señales.
+
+\section{Transposición de P-BSS al un curso de Álgebra Lineal}
+
+En \textcite{Vazquez_2016} se generó una transposición de una praxeología BSS académica de ingeniería a un curso de matemáticas, considerando el contexto de audio, mostrando su viabilidad didáctica. Con base en ello, en esta investigación también se consideró este contexto. La transposición realizada en esta tesis es distinta a la generada en \textcite{Vazquez_2016}, principalmente por los elementos del medio generados en el programa Python, que dan lugar a una nueva praxeología escolar, como se detalla a continuación.
+
+Se escogieron tres señales, fragmentos de tres melodías producidas por instrumentos diferentes (fuentes), se combinaron utilizando una matriz de mezcla específica que modelaba la ubicación espacial de las fuentes y observaciones, produciendo tres señales mezcladas diferentes (observaciones). El objetivo es separar las mezclas para identificar la melodía de cada instrumento. Se eligió trabajar con estas señales ya que los experimentos por medio de software muestran que sus distribuciones de probabilidad son no Gaussianas (imagen \ref{fig: HistogramaSonidos}), y que son estadísticamente independientes, por tanto, se pueden mezclar para luego separarse conociendo la matriz de mezcla o mediante el procedimiento FastICA.
+
+\begin{figure}[h]
+	\caption{Representaciones gráficas audios (10 seg) e histogramas}\label{fig: HistogramaSonidos}
+	\centering
+	\includegraphics[width=17cm]{cap5/histogram}\\		
+	\small \raggedright \textit{Fuente}: elaboración propia utilizando \textit{Wolfram Mathematica 12}.
+\end{figure}
+
+Las señales escogidas corresponden a fragmentos de diez segundos de tres melodías diferentes, interpretadas con un \textit{chelo}, una \textit{flauta} y un \textit{violín} respectivamente. Se partió del supuesto que las tres señales son funciones continuas y estadísticamente independientes entre sí, por tanto, se pueden combinar linealmente dando como resultado señales continuas (las mezclas). Además, al ser estadísticamente independientes no es posible construir la melodía de un instrumento a partir de la otra o las otras dos.
+
+Así, denotando las melodías de los instrumentos por $s_1(t)$, $s_2(t)$ y $s_3(t)$ $(t \leq 0 \leq 10)$, y las mezclas como $o_1(t), o_2(t)$ y $ o_3(t)$, podemos relacionarlas por medio de las combinaciones lineales:
+
+\begin{equation}\label{eq:ecu_audios}
+	\begin{split}
+		o_1(t) = a_{1,1} s_1(t) + a_{1,2} s_2(t) + a_{1,3} s_3(t)\\
+		o_2(t) = a_{2,1} s_1(t) + a_{2,2} s_2(t) + a_{2,3} s_3(t)\\
+		o_3(t) = a_{3,1} s_1(t) + a_{3,2} s_2(t) + a_{3,3} s_3(t)		
+	\end{split}
+\end{equation}
+
+El sistema \eqref{eq:ecu_audios} tiene como variables las melodías de los instrumentos y como datos conocidos las mezclas, resolverlo requiere discretizar las mezclas y trabajar con tantas ecuaciones como el número de intervalos de la discretización, de tal manera que resulten sistemas de ecuaciones que se puedan resolver por medio de algoritmos de computadora y den como resultado los valores de las melodías en cada instante. Con el fin de disminuir el error de discretización se determina trabajar con 14700 datos por segundo (147000 datos en total, por los diez segundos de cada mezcla). Aunque se puede escoger una discretización de hasta 44000 datos por segundo, los experimentos muestran que esta discretización requiere mucho trabajo computacional y que las soluciones con 14700 datos por segundo permiten recuperar las melodías, sin gran pérdida de datos, utilizando software libre como \textit{Google Colab}, \jupy{} o \textit{Python}.
+
+Los coeficientes $a_{i,j}$ del sistema \eqref{eq:ecu_audios} son determinados por la distancia entre las tres fuentes y las observaciones, debido a que la intensidad de una onda de sonido es inversamente proporcional al cuadrado de la distancia entre su origen y fin.
+
+La matriz
+$$A = \begin{pmatrix}
+	a_{1,1}&	a_{1,2}&	 a_{1,3} \\ 
+	a_{2,1}&	a_{2,2}&	 a_{2,3} \\ 
+	a_{3,1}&	a_{3,2}&	 a_{3,3} 
+\end{pmatrix}$$
+se denomina \textit{matriz de mezcla} y la inversa (cuando existe) permite solucionar el problema.
+
+Dado el intervalo $[0, 10]$ dividido en $n = 147000$ subintervalos iguales:
+\begin{itemize}
+	\item el instante $t_i$ define como:
+	$$t_i = \left(\dfrac{10}{147000}\right) i = \dfrac{i}{14700}, \ i \in \mathbb{Z}, \  0 \leq i \leq 147000$$
+	
+	\item el vector de mezcla instantáneo se define como:
+	$$\mathbf{o}(t_i) = \left [ o_1(t_i), o_2(t_i), o_3(t_i) \right ]$$
+	donde $o_1(t_i), o_2(t_i)$ y $o_3(t_i)$ son los datos instantáneos en $t_i$ de las señales conocidas $o_1(t), o_2(t)$ y $o_3(t)$.
+	
+	\item el vector de la melodía instantánea se define como:
+	$$\mathbf{s}(t_i) = \left [s_1(t_i), s_2(t_i), s_3(t_i) \right ]$$
+	donde $s_1(t_i), s_2(t_i)$ y $s_3(t_i)$ son los datos instantáneos en $t_i$ de las señales a recuperar $s_1(t), s_2(t)$ y $s_3(t)$.
+\end{itemize}
+El sistema  \eqref{eq:ecu_audios} se representa mediante las ecuaciones matriciales instantáneas: $$\mathbf{o}(t_i) =A \mathbf{s}(t_i)\, \ \ \ i \in \mathbb{N}, 0 \leq i \leq 147000 $$
+Si la inversa de $A$ existe, entonces la solución (única) para cada instante es: $\mathbf{s}(t_i)^{*}=A^{-1} \mathbf{o}(t_i)$, donde $\mathbf{s}^*$ representa las fuentes recuperadas.
+
+Entonces, se puede reconstruir una praxeología escolar Pe-BSS conformada por los siguientes componentes:
+
+\paragraph{Tipo de tarea} ($T$): modelar una mezcla simulada de tres melodías producidas por tres instrumentos, ubicados arbitrariamente.
+
+\paragraph{La técnica} ($\tau$):
+\begin{enumerate} [a.]
+	\item Asociar los sonidos recuperados con las mezclas de tres instrumentos sonando al mismo tiempo.
+	
+	\item Determinar las características de las mezclas y de sus componentes. En cada mezcla escucha de manera diferente los sonidos de los instrumentos (con mayor o menor volumen), determinado por su intensidad, que a su vez depende de la distancia entre el oyente y músico. Por tanto, la mezcla debe combinar de alguna manera estos componentes.
+	
+	\item Estudiar las distancias fuente - observación (a menor distancia, mayor intensidad), hallar las distancias que intervienen en el sistema, y con estas hallar las intensidades entre fuentes y observaciones.
+	
+	\item Expresar mediante combinaciones lineales la relación entre los sonidos de los instrumentos, las intensidades y mezclas.
+	
+	\item Identificar la matriz de mezcla y encontrar la inversa.
+	
+	\item Dadas las mezclas discretizadas, resolver los sistemas de ecuaciones (con un algoritmo de computador) para encontrar los sonidos discretizados.
+\end{enumerate}
+
+Es decir, la mezcla puede ser modelada por un sistema de ecuaciones lineales instantáneas donde conociendo la intensidad se conoce la matriz de mezcla y la inversa que da solución al sistema (y se garantiza que es única), para así separar y recuperar los sonidos de cada instrumentos.
+
+\paragraph{La tecnología} ($\theta$): las nociones de función continua y de espacio vectorial garantizan la existencia de las mezclas como funciones continuas. El concepto de ecuación como una igualdad o equivalencia permite representarlas como combinaciones de los tonos puros y modelarlas por medio de un sistema de tres ecuaciones con tres incógnitas.
+
+La existencia y unicidad de la solución se basa en elementos del Álgebra Lineal, el modelo matricial $A\mathbf{x}=\mathbf{b}$ y la noción de matriz inversa.
+
+La existencia de la mezcla se basa en las nociones de espacios vectoriales, transformaciones y combinación lineales.
+
+El estudio de señales de audio se basa en el procesamiento de señales.
+
+\paragraph{La teoría} ($\Theta$): Geometría euclidiana, Álgebra Lineal, teoría de señales, análisis de componentes principales.
+
+\section{Consideraciones finales}
+El conjunto de praxeologías locales de la P-BSS consideradas en el análisis praxeológico y su transposición a la praxeología Pe-BSS, la revisión de artículos de investigación y divulgación, libros científicos, textos universitarios, microcurrículos y software matemáticos se materializaron en la propuesta del Modelo Epistemológico de Referencia (MER) alternativo utilizado en esta investigación. A partir de este se formularon praxeologías regionales referentes a la BSS ($P_{U1}$, $P_{U2}$, $P_{U2}$) y se establecieron relaciones con la institución de enseñanza, así $P_{U3}$: \textit{la separación de señales de diferente naturaleza} se relacionó con las praxeologías locales del Álgebra Lineal $P_{E1}$, $P_{E2}$, $P_{E3}$, $P_{E4}$, $P_{E5}$ y $P_{E6}$. Finalmente, las relaciones entre $P_{U3} \rightarrow \{P_{E1}, P_{E2}, P_{E3}, P_{E4}, P_{E5}\}$ y el contexto escogido de la mezcla de melodías, permitieron reconstruir la praxeología escolar Pe-BSS cuyos componentes serán analizados en la siguiente fase y dan origen al diseño del \rei{}.

@@ -1,0 +1,86 @@
+\documentclass[12pt,spanish,openany,letterpaper,pagesize,chapterprefix=true]{scrbook}
+\usepackage[left=2.5cm,top=2.5cm,right=2.5cm,bottom=2.5cm]{geometry}% Márgenes del documento
+\usepackage[latin1]{inputenc} %Acentos de espanol
+\usepackage[spanish,es-noshorthands,activeacute]{babel} % Escribir en espanol
+\usepackage[spanish]{layout} % Escribir en espanol
+\usepackage[mathscr]{euscript}
+ %----modificar las caption-----
+\usepackage[singlelinecheck=off, format=plain, font=small, labelfont=bf, textfont=it, labelsep=newline]{caption}
+\captionsetup[table]{name=Tabla}
+\captionsetup[figure]{name=Figura}
+%--------------------------------------------
+%----------------Fecha-----------------------
+\usepackage{datetime}
+\newdateformat{monthyeardate}{%
+	\monthname[\THEMONTH], \THEYEAR}
+%-------------------------------------------
+\usepackage{comment}  % comentarios
+\usepackage{latexsym,amsmath,amsthm,amssymb,amsfonts,bbm} 
+\decimalpoint
+\usepackage[hyphens]{url}
+\usepackage[para]{threeparttable}
+\renewcommand{\arraystretch}{1.5}
+\usepackage{enumerate}
+\usepackage{pgf}
+\usepackage{wrapfig} %Inclusión de gráficos al lado de texto
+%\usepackage[allfiguresdraft]{draftfigure} %quita las figuras, deja el espacio
+\usepackage{float}
+\usepackage{subfigure} %varias figura en una
+\pagestyle{headings} %numeros y encabezados de las secciones
+\usepackage{color} % Color en las fuentes
+\usepackage{multicol} % Paquete para generar varias columnas
+\usepackage[colorlinks=true,linkcolor=black,urlcolor=black,filecolor=black,citecolor=darkgray]{hyperref} %Paquete de enlaces
+\usepackage{epstopdf} %seleccionar texto en el pdf
+\usepackage{MnSymbol}
+%--------------------------------------------
+\usepackage{doi}
+% blockquotation and other
+\usepackage[]{tocbibind}
+
+\usepackage[spanish=mexican,threshold=40,thresholdtype=words]{csquotes} 
+
+\usepackage[style=apa]{biblatex}
+
+\DefineBibliographyStrings{spanish}{%
+	andothers = {\em et\addabbrvspace al\adddot}}
+
+\DeclareDelimFormat[bib]{finalnamedelim}{%
+	\ifthenelse{\value{listcount}>\maxprtauth}
+	{}
+	{\ifthenelse{\value{liststop}>2}
+		{\finalandcomma\addspace\bibstring{and}\space}
+		{\addspace\bibstring{and}\space}}}
+
+\DeclareDelimFormat[bib]{finalnamedelim:apa:family-given}{%
+	\ifthenelse{\value{listcount}>\maxprtauth}
+	{}
+	{\ifthenelse{\ifcurrentname{groupauthor}\AND%
+			\value{liststop}=2}
+		{\addspace\bibstring{and}\space}
+		{\finalandcomma\addspace\bibstring{and}\space}}}
+	
+\DeclareDelimFormat[cite,nptextcite,fullcite,fullcitebib]{finalnamedelim}
+{\ifnum\value{liststop}>2 \finalandcomma\fi\addspace\bibstring{and}\space}
+
+\addbibresource{bib/bibliography.bib}
+%--------------------------------------------
+\renewcommand{\mkcitation}[1]{\space#1}
+\usepackage{pifont}
+%--------------------------------------------
+%\RedeclareSectionCommand[innerskip=0pt]{chapter}
+\renewcommand*\chapterheadstartvskip{{\noindent\rule{\linewidth}{1pt}\par}{}}% Horizontal rule above chapter
+\renewcommand*\chapterheadendvskip{\noindent\rule{\linewidth}{1pt}\par\vspace*{\baselineskip}} % Horizontal rule below chapter
+\renewcommand{\theequation}{\thechapter-\arabic{equation}}
+\renewcommand{\thefigure}{\textbf{\thechapter-\arabic{figure}}}
+\renewcommand{\thetable}{\textbf{\thechapter-\arabic{table}}}
+\renewcommand{\baselinestretch}{1.1}%Espacio entre lineas
+\def\d{\displaystyle}
+%--------------------------------------------
+\newcommand{\qq}[1] {\hyperlink{#1}{$\mathbf{#1}$}}
+\newcommand{\rei} {\textit{REI-ASM}}
+\newcommand{\jupy} {\textit{Jupyther}}
+\newcommand{\rhearth} {$\mathbf{R}^\heartsuit$}
+
+%--------------------------------------------
+
+

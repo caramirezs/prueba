@@ -1,0 +1,264 @@
+\chapter{EXPERIMENTACIÓN Y ANÁLISIS IN VIVO} \label{cap:AnalisisINVIVO}
+
+El diseño del \rei consiste en generar un dispositivo didáctico enfocado en el estudio de una cuestión abierta, que permita construir praxeologías de modelización matemática, producto de una transposición operada sobre P-BSS, considerando el contexto de audio \parencite{Vazquez_2016, Vazquez2017} y la guía de la experta en BSS. El contexto bajo el que se construyó la Pe-BSS, se inspira en el \textit{cocktail party problem}; se trata de una visita a un concierto de música clásica:
+\begin{center}
+	\fbox{
+		\begin{minipage}[c]{0.8\linewidth}
+			Suponga que usted y dos amigos más ingresan a un concierto de música clásica, como compraron las boletas a última hora, no consiguieron sillas juntas y se acomodaron separados en las pocas sillas que quedaban.
+			
+			Antes de iniciar el concierto los músicos calientan y afinan sus instrumentos, por lo que se escuchan algunas melodías durante unos minutos.
+			
+			Los siguientes audios corresponden a un fragmento de 10 segundos que cada uno escuchó desde la posición en donde estaba sentado.
+			
+			\begin{itemize}
+				\item \url{https://bit.ly/REI_mezcla1}
+				\item \url{https://bit.ly/REI_mezcla2}
+				\item \url{https://bit.ly/REI_mezcla3}
+			\end{itemize}
+	\end{minipage}}
+\end{center}
+
+Para el desarrollo del REI se contó con el apoyo de un docente que pertenece al grupo de estudio de la Escuela de Ciencias Básicas de la institución, quien junto con el investigador principal desarrollaron e implementaron el REI de manera simultánea en dos cursos virtuales de álgebra lineal. Cada uno con foros de discusión individuales y grupales donde los estudiantes participaron y leyeron los aportes de sus compañeros, plantearon posibles vías de solución a la actividad, presentaron informes y conclusiones.
+
+Para el desarrollo del REI se cuenta con los foros mediados por la herramienta de foros de discusión del LMS \textit{CANVAS}, encuentros sincrónicos semanales mediados por \textit{Microsoft Teams}, la aplicación \textit{Mentimeter} para organizar y exponer las respuestas de los encuentros sincrónicos, \textit{OneNote} como pizarra electrónica para realizar la exposición de las conclusiones y resúmenes de las diferentes actividades, y \textit{Jupyter} para el diseño de los aplicativos interactivos y donde se espera que algunos grupos puedan programar o ejecutar el desarrollo de las soluciones. Todas las herramientas mencionadas permiten guardar la información para su posterior análisis.
+
+
+
+El Politécnico Grancolombiano es una institución universitaria privada de Colombia. En los programas virtuales de ingeniería, ofrece un curso de Álgebra Lineal con una duración de ocho semanas. Durante las semanas 3, 4 y 5 se realiza la actividad transversal `\textit{trabajo colaborativo}', por equipos de cinco a siete estudiantes (de 23 a 30 equipos por curso) y consiste en abordar una situación-problema que requiere la aplicación de los conceptos estudiados durante las cuatro primeras semanas. Para su desarrollo se proponen foros por equipo y encuentros sincrónicos grupales semanales. La calificación representa el 28\% de la nota final del curso. 
+
+Para implementar el Recorrido de Estudio e Investigación: Análisis y Separación de Mezclas (\rei{}), se modificaron las condiciones institucionales, su desarrollo duró siente semanas en lugar de tres, se utilizaron cuatro foros de discusión (tres individuales y uno grupal) y se realizaron seis encuentros sincrónicos (uno por semana), la figura \ref{fig:cronograma} relaciona el cronograma de desarrollo del \rei{} y las actividades realizadas. 
+
+\begin{figure}[H]
+	\caption{Cronograma actividades \rei{}}\label{fig:cronograma}
+	\centering	
+	\includegraphics[width=\textwidth]{cap6/cronograma}\\	
+	\small \raggedright \textit{Fuente}: elaboración propia.
+\end{figure}
+
+El \rei{} se implementó como actividad transversal en dos grupos de 150 estudiantes (en la terna didáctica esto corresponde al grupo de personas que quiere estudiar algo - $X$), durante el segundo semestre del año 2020. Los docentes a cargo de cada curso, uno de ellos el investigador principal, conforman el equipo de investigadores (que corresponde a $Y$: grupo de personas que ayudan a $X$).
+
+El diseño, como se explicó en el capítulo \ref{cap:Diseno}, se estructuró en cuatro fases relacionadas con los momentos del proceso de estudio \parencite{Chevallard1999, Serrano2012}: la \textbf{fase 1} corresponde al primer encuentro con el tipo de tarea, la \textbf{fase 2} al momento exploratorio y desarrollo de la técnica, la \textbf{fase 3} al momento de trabajo con la técnica, y la \textbf{fase 4} a un momento final de institucionalización. 
+
+Cuatro tipos de datos fueron recolectados: \textbf{a.} la participación de los estudiantes en foros de discusión (individual o grupal): donde los estudiantes publicaban los avances de las cuestiones a investigar, \textbf{b.} las grabaciones de los encuentros sincrónicos (conferencias), \textbf{c.} el cuaderno digital para revisar el estado de la investigación, consolidar los avances de los grupos y proponer el camino a seguir, y por último \textbf{d.} los informes grupales: finalizando cada actividad los equipos entregaron un informe del consolidado de las participaciones en los foros y desarrollo de la actividad propuesta. 
+
+\section{Implementación}
+
+La implementación de las actividades que conformaron el \rei{} se llevó a cabo en siete semanas moderadas por el equipo de investigadores, con participación de aproximadamente 90\% de los estudiantes. Al cierre de los foros y las conferencias, el equipo de investigadores realizaba una reunión para intercambiar información de las participaciones de los estudiantes, revisar las entregas de los informes, sintetizar el desarrollo de la actividad y estructurar las siguientes actividades, haciendo modificaciones a la secuencia inicial cuando fuera necesario.
+
+La implementación se desarrolló de la siguiente manera:
+
+\subsection{Fase 1: Encuentro con el tipo de tarea}
+\begin{itemize}
+	
+	\item Inició con \textbf{foro 1 - individual} (figura \ref{fig:1.1.Foro1}), donde se presenta un contexto no matemático mediante el video \href{https://embed.ted.com/talks/douglas_l_oliver_the_science_of_hearing}{\textit{The science of hearing}} y se pide a los estudiantes reflexionar sobre \textbf{P1:} ¿Qué hace el cerebro ante la presencia de los sonidos? y, \textbf{P2:} ¿Qué estrategias o herramientas se utilizan en la actualidad para separar sonidos?
+	
+	\begin{figure}[H]
+		\caption{Instrucciones de la primera participación. Foro individual} \label{fig:1.1.Foro1}
+		\centering
+		\includegraphics[width=\textwidth]{cap6/1.1.Foro1}\\		
+		\small \raggedright \textit{Fuente}: elaboración propia.
+	\end{figure}
+			
+	\item Luego se desarrolló la \textbf{conferencia 1} con todo el grupo de estudiantes, se realizó una puesta en común, resumen y consolidación de las participaciones individuales, preguntando por los conceptos a investigar y proponiendo preguntas a estudiar para entender y usar las herramientas de separación de sonidos. 
+	La conferencia finalizó presentando la situación y la pregunta generadora por medio de un cuaderno interactivo desarrollado en \jupy{} (figura \ref{fig:1.1.JupyterSituacion}), en el que los estudiantes podían interactuar para escuchar la mezcla de sonidos:
+	
+	\begin{comment}
+			\begin{center}
+			\fbox{
+				\begin{minipage}[c]{0.9\linewidth}
+					\textbf{Situación:}\\
+					Suponga que usted y dos amigos más ingresan a un concierto de música clásica, como compraron las boletas a última hora, no consiguieron sillas juntas y se acomodaron separados en las pocas sillas que quedaban.
+					
+					Antes de iniciar el concierto los músicos calientan y afinan sus instrumentos, por lo que se escuchan algunas melodías durante unos minutos.
+					
+					Los siguientes audios corresponden a un fragmento de 10 segundos que cada uno escuchó desde la posición en donde estaba sentado.\\
+					\url{https://bit.ly/REI_mezcla1}, \url{https://bit.ly/REI_mezcla2},\\ \url{https://bit.ly/REI_mezcla3}
+					\begin{center}
+						{\textit{$\mathbf{Q_0}$: ¿Cuál es el proceso matemático para separar los sonidos de los audios?}}
+					\end{center}
+			\end{minipage}}
+		\end{center}
+	\end{comment}
+	
+	\begin{figure}[H]
+		\caption{Cuaderno: la ciencia del sonido. Elaborado en \jupy}\label{fig:1.1.JupyterSituacion}
+		\centering
+		\includegraphics[width=\textwidth]{cap6/1.1.JupyterSituacion}\\		
+		\small \raggedright \textit{Fuente}: elaboración propia.
+	\end{figure}
+	
+	\item Con el fin de profundizar sobre algunas de las preguntas resultantes de la \textbf{conferencia 1} y formular nuevas preguntas para estudiar, se creó el \textbf{foro 2 - individual} (figura \ref{fig:1.1.Foro2}) dividiendo el estudio en cuatro categorías, donde cada estudiante debía escoger una de ellas y participar de manera individual en el foro.
+	
+	\begin{figure}[H]
+		\caption{Instrucciones de la segunda participación. Foro individual} \label{fig:1.1.Foro2}
+		\centering
+		\includegraphics[width=\textwidth]{cap6/1.1.Foro2}\\		
+		\small \raggedright \textit{Fuente}: elaboración propia.
+	\end{figure}
+	
+	\item Luego, se desarrolló la \textbf{conferencia 2} donde se identificaron tres ejes de estudio: Respecto a los instrumentos, respecto al sonido, y respecto a los objetos matemáticos. Producto de la consolidación de las participaciones del foro y de la conferencia, el grupo de estudiantes e investigadores decidieron seguir el proceso de investigación mediante el estudio de las siguientes preguntas:
+	\begin{itemize}
+		\item $\mathbf{Q_1}$: \textit{¿Cuántos y cuáles instrumentos logras identificar?}
+		\item $\mathbf{Q_2}$: \textit{¿Qué es el sonido?}
+		\begin{itemize}
+			\item $\mathbf{Q_{21}}$: \textit{¿Qué es una melodía?}
+			\item $\mathbf{Q_{22}}$: \textit{¿Qué es un tono?}
+			\item $\mathbf{Q_{23}}$: \textit{¿Qué es la frecuencia?}
+			\begin{itemize}
+				\item $\mathbf{Q_{231}}$: \textit{¿Qué relación tiene el tono con la frecuencia?}
+			\end{itemize}
+			\item $\mathbf{Q_{24}}$: \textit{¿Qué es la intensidad?}
+			\begin{itemize}
+				\item $\mathbf{Q_{241}}$: \textit{¿Qué relación tiene la intensidad con la distancia?}
+				\item $\mathbf{Q_{242}}$: \textit{¿Cómo conocer las distancias?}
+			\end{itemize}
+			\item $\mathbf{Q_{25}}$: \textit{¿Por qué es importante conocer la ubicación?}
+			\begin{itemize}
+				\item $\mathbf{Q_{251}}$: \textit{¿Cómo las podemos conocer?}
+			\end{itemize}
+		\end{itemize}
+	\end{itemize}
+	\begin{itemize}
+		\item $\mathbf{Q_3}$: \textit{¿Qué objetos matemáticos permiten la separación de sonidos?}
+		\begin{itemize}
+			\item $\mathbf{Q_{31}}$: \textit{¿Cómo modela una función un tono?}
+			\begin{itemize}
+				\item $\mathbf{Q_{311}}$: \textit{¿Cómo utilizar funciones trigonométricas?}
+			\end{itemize}
+			\item $\mathbf{Q_{32}}$: \textit{¿Cómo se relaciona una mezcla de tonos con los sistemas de ecuaciones lineales?}
+			\begin{itemize}
+				\item $\mathbf{Q_{321}}$: \textit{¿Qué representa las variables y constantes del sistema?}
+				\item $\mathbf{Q_{322}}$: \textit{¿Cómo se forma la combinación lineal?}
+			\end{itemize}
+			\item $\mathbf{Q_{33}}$: \textit{¿Qué es la separación ciega de fuentes?}
+			\begin{itemize}
+				\item $\mathbf{Q_{331}}$: \textit{¿Qué métodos hay de separación?}
+			\end{itemize}
+		\end{itemize}
+	\end{itemize}
+	$\mathbf{Q_1}$ no generó otras preguntas a estudiar porque su respuesta fue cerrada y no única, las diferentes respuestas se guardaron en el cuaderno digital para contrastarlas una vez finalizada la actividad.
+	
+	\item Para investigar $\mathbf{Q_2}$ y $\mathbf{Q_3}$ se decidió trabajar en equipos y se creó el \textbf{foro 3 - por equipos} (figura \ref{fig:1.1.F3.A1}), y la \textbf{actividad 1}.
+	
+	\begin{figure}[H]
+		\caption{Instrucciones de la primera actividad. Foro grupal} \label{fig:1.1.F3.A1}
+		\centering
+		\includegraphics[width=\textwidth]{cap6/1.1.Foro3.Actividad1.v2}\\		
+		\small \raggedright \textit{Fuente}: elaboración propia.
+	\end{figure}
+	
+	\item En la \textbf{conferencia 3} se presentaron los avances de las participaciones en los foros grupales y los informes, discutiendo las respuestas que debían investigar y planteando nuevas cuestiones emergentes de dichas investigaciones con las cuales se inició un nuevo ciclo de investigación. Las preguntas resultado de la discusión fueron:
+	\begin{itemize}
+		\item $\mathbf{Q_{3}}$
+		\begin{itemize}
+			\item $\mathbf{Q_{34}}$: \textit{¿Qué objetos matemáticos permite que identifiquemos y separemos sonidos?}
+			\begin{itemize}
+				\item $\mathbf{Q_{341}}$: \textit{¿Qué representa cada uno de los elementos del sistema?}
+				\item $\mathbf{Q_{342}}$: \textit{¿Cuál es el sistema de ecuaciones que modela una una configuración de fuentes - observaciones?}
+			\end{itemize}
+		\end{itemize}
+	\end{itemize}
+	
+	
+	Nuevamente la conferencia permite mostrar el avance de algunos grupos de tal manera que todos tuvieran las mismas herramientas para continuar el recorrido. Para este momento, en varios informes ya se estaba estudiando los métodos de separación y el uso de sistemas de ecuaciones lineales para representar la mezcla de sonidos. Todos los informes de la \textbf{actividad 1} fueron compartidos con los grupos para que pudieran revisar los trabajos de sus compañeros y utilizarlos para su propio estudio.
+\end{itemize}	
+
+\subsection{Fase 2: Momento exploratorio}
+\begin{itemize}	
+	\item Las preguntas planteadas en la conferencia 3 permitieron dar inicio a la segunda fase con la \textbf{actividad 2} (figura \ref{fig:1.1.F3.A2}): estudio de las mezclas y separación de los tonos puros. Se desarrolló en el \textbf{foro 3}; a cada grupo se le entregó un sistema de \textit{fuentes - observaciones} de $2\times 2$ para estudiar las variables y parámetros del sistema de ecuaciones asociado, y una configuración de $3\times 3$ para representarlo mediante un sistema de ecuaciones lineales.
+	
+	\begin{figure}[H]
+		\caption{Instrucciones de la segunda actividad. Foro grupal} \label{fig:1.1.F3.A2}
+		\centering
+		\includegraphics[width=\textwidth]{cap6/1.1.Foro3.Actividad2}\\		
+		\small \raggedright \textit{Fuente}: elaboración propia.
+	\end{figure}
+	
+	Para esta actividad se diseño un nuevo cuaderno de \jupy{} donde los equipos podían cambiar la ubicación de las fuentes y observaciones, escuchar las mezclas resultantes, y ver una representación gráfica y tabular de las señales discretizadas (figura \ref{fig:1.1.F3.A2.aplicativo}).
+	
+	\begin{figure}[H]
+		\caption{Aplicativo de experimentación para la segunda actividad} \label{fig:1.1.F3.A2.aplicativo}
+		\centering
+		\includegraphics[width=\textwidth]{cap6/1.1.Foro3.Actividad2.aplicativo}\\		
+		\small \raggedright \textit{Fuente}: elaboración propia.
+	\end{figure}
+	
+	\item En la \textbf{conferencia 4} se consolidan las investigaciones presentadas de los informes, cobra especial interés la relación entre la distancia y la intensidad del sonido, ya que la mayoría de equipos utilizaron la primera para representar las configuraciones. Una vez aclaradas las principales dificultades, surge una nueva cuestión referente al estudio de las señales y su discretización. Los avances realizados por algunos grupos se familiarizaron y permitieron formular nuevas preguntas de investigación:
+	\begin{itemize}
+		\item $\mathbf{Q_{4}}$: \textit{¿Cómo resolver los 44100 sistemas discretos resultantes?}
+		\begin{itemize}
+			\item $\mathbf{Q_{41}}$: \textit{¿Cómo se discretizan las señales?}
+			\item $\mathbf{Q_{42}}$: \textit{¿Qué método se puede aplicar para resolver el sistema?}
+		\end{itemize}
+	\end{itemize}
+\end{itemize}	
+
+\subsection{Fase 3: Momento de trabajo con la técnica}
+\begin{itemize}
+	\item Para estudiar las nuevas preguntas se propone la \textbf{actividad 3} (figura \ref{fig:1.1.F3.A3}), nuevamente en el \textbf{foro 3}; cuyo objetivo es identificar el sistema de ecuaciones lineales que representa los sonidos mezclados de tres fuentes, discretizar las señales y estudiar un método que permita resolver los múltiples sistemas de ecuaciones. De manera opcional se pide resolverlos y recuperar los tonos puros.
+	
+	\begin{figure}[H]
+		\caption{Instrucciones de la tercera actividad. Foro grupal} \label{fig:1.1.F3.A3}
+		\centering
+		\includegraphics[width=\textwidth]{cap6/1.1.Foro3.Actividad3}\\		
+		\small \raggedright \textit{Fuente}: elaboración propia.
+	\end{figure}
+	
+	Nuevamente se invitó a los estudiantes a trabajar con el cuaderno de \jupy{} donde podían analizar las señales discretizadas y crear un algoritmo que resolviera todos los sistemas de ecuaciones utilizando los conceptos estudiados en la asignatura.
+	
+\end{itemize}	
+
+\subsection{Fase 4: Momento final de institucionalización}
+\begin{itemize}	
+	\item En la \textbf{conferencia 5} se mostró el avance de los equipos en la respuesta de $\mathbf{Q_{4}}$ y el proceso que algunos utilizaron para recuperar las señales fuentes (tonos puros). El avance realizado durante las diferentes actividades de los foros, la entrega de informes y las conferencias permitió abordar nuevamente la situación del concierto e intentar separar las mezclas de los instrumentos. 
+	
+	Se diseño un nuevo aplicativo en \jupy{} donde se podía escoger la ubicación de los músicos y los asistentes para generar los audios con las mezclas de los instrumentos y a partir de estos utilizar la técnica desarrollada para separarlas. Emergieron las siguientes preguntas:
+	\begin{itemize}
+		\item $\mathbf{Q_{5}}$: \textit{¿Cuál es el sistema de ecuaciones que modela las mezclas del concierto?}
+		\begin{itemize}
+			\item $\mathbf{Q_{51}}$: \textit{¿Qué software se puede usar?}
+			\item $\mathbf{Q_{52}}$: \textit{¿Cómo utilizar los métodos de separación BSS?}
+		\end{itemize}
+	\end{itemize}
+	Para finalizar la conferencia se realizaron experimentos con el algoritmo de separación ciega de fuentes  \textit{FastICA}, el cual permite separar las mezclas de los sonidos sin conocer la ubicación de los músicos.
+	
+	\item Para consolidar todo el trabajo desarrollado por los estudiantes se creó el \textbf{foro 4 - individual} (figura \ref{fig:1.1.F4.1}). Aquí se invita a los estudiantes describir el proceso matemático (paso a paso) necesario para separar los sonidos de los audios y responder las preguntas ¿cuáles fueron las principales dificultades que tuvieron para abordar y dar respuesta a las actividades propuestas? y ¿qué aspectos positivos resaltan de la experiencia y las actividades propuestas?
+	
+	\begin{figure}[H]
+		\caption{Foro de consolidación de la actividad. Foro individual} \label{fig:1.1.F4.1}
+		\centering
+		\includegraphics[width=\textwidth]{cap6/1.1.Foro4.1}\\		
+		\small \raggedright \textit{Fuente}: elaboración propia.
+	\end{figure}
+	
+	\item En la \textbf{conferencia 6} se utilizó el recurso desarrollado en \jupy{} para crear una configuración de músicos y oyentes, se generó los archivos de audio y su representación tabular (figura \ref{fig:1.1.F4.aplicativo}). 
+	
+	\begin{figure}[H]
+		\caption{Aplicativo de experimentación consolidado final} \label{fig:1.1.F4.aplicativo}
+		\centering
+		\includegraphics[width=\textwidth]{cap6/1.1.Foro4.aplicativo}\\		
+		\small \raggedright \textit{Fuente}: elaboración propia.
+	\end{figure}
+
+	Se estableció el sistema correspondiente a la configuración creada y se solucionó utilizando la matriz inversa. Los datos recuperados se convirtieron en señales de audio y finalmente se escucharon los audios separados. Ya que algunos equipos habían investigado sobre el algoritmo \textit{FastICA}, se mostró cómo se podía implementar para dar solución a la situación. Como cierre, se pidió a los estudiantes pensar en $\mathbf{Q_0}$ y, reformular la posible \rhearth{}, las fases de la implementación se esquematizan en la figura \ref{fig:A.inVivo}. {\color{red} REVISAR LA IMAGEN}
+		
+\begin{figure}[H]
+	\caption{Desarrollo del \rei{}}\label{fig:A.inVivo}
+	\centering	
+	\includegraphics[width=\textwidth]{cap6/A.inVivo}\\	
+	\small \raggedright \textit{Fuente}: elaboración propia.
+\end{figure}
+\end{itemize}
+
+En el esquema de la figura \ref{fig:Questiograma} se evidencia la adaptación final del \rei{}, donde se identificaron las cuestiones derivadas propuestas por los estudiantes en los foros o conferencias, los medias (fuentes de información), las respuestas que fueron encontrando y adaptando, así como el uso de los medios y recursos digitales. NO Es CIERTO - REVISAR
+
+\begin{figure}[H]
+	\caption{Mapa de preguntas y respuestas del análisis in vivo}\label{fig:Questiograma}
+	\centering	
+	\includegraphics[width=\textwidth]{cap6/MapaPreguntasRespuestas}\\	
+	\small \raggedright \textit{Fuente}: elaboración propia.
+\end{figure}
+
+
+
+

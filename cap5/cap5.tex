@@ -1,0 +1,199 @@
+\chapter{DISEÑO DEL REI Y ANÁLISIS A PRIORI} \label{cap:Diseno}
+
+El MER alternativo es el fundamento y justificación del diseño del \rei{} y a partir de este se consideró la hipótesis provisional que los estudiantes de la asignatura de Álgebra Lineal virtual pueden construir la Pe-BSS. Esta construcción inicia con la cuestión de estudio $\mathbf{Q_0}$ cuya respuesta desencadena las cuestiones y respuestas que integran el medio didáctico de estudio.
+
+El diseño del \rei{} comenzó con la elección de la pregunta generatriz, teniendo en cuenta el \textbf{tipo de tarea} (T) de la Pe-BSS: \textit{modelar una mezcla simulada de tres melodías producidas por tres instrumentos, ubicados arbitrariamente}, se propuso la siguiente pregunta inicial:
+
+\begin{center}
+	\fbox{
+		\begin{minipage}[c]{0.8\linewidth}
+			\hypertarget{Q.0ini}{$\mathbf{Q_0}$}: \textit{¿Cuál es el proceso matemático para separar los sonidos de los audios?}
+	\end{minipage}}
+\end{center}
+
+El proceso que da respuesta a $\mathbf{Q_0}$ se dividió en tres componentes: 
+\paragraph{El sonido y sus características.} 
+De este componente se derivan investigaciones asociadas a: ondas, tonos, frecuencia, intensidad, timbre, velocidad del sonido, medio de propagación, entre otros. Particularmente, el estudio de tonos presentó una manera de simplificar el modelo de las mezclas de las melodías a un modelo de mezclas de tonos puros los cuales se pueden representar como una función continua senoidal de la forma: $s(t) = A \sin \left( 2 \pi f t \right)$, siendo $A$ la amplitud, $f$ la frecuencia y $t$ el tiempo $0 \leq t \leq 10$. Finalmente, las mezclas de tonos se pueden representar como una combinación lineal de tonos puros $o(t) = A_1 \sin \left( 2 \pi f_1 t \right) + \cdots +  A_i \sin \left( 2 \pi f_i t \right) $, resultando funciones continuas sobre $[0, 10]$.
+
+Los elementos de estudio de esta componente se asociaron a la pregunta $\mathbf{Q_1}$: \textit{¿Qué es el sonido y cuáles son sus características?}
+
+\paragraph{Las herramientas para la separación y manipulación de señales.}
+En el análisis praxeológico de P-BSS y su transposición Pe-BSS surgieron diferentes herramientas de índole matemático, ingenieril y tecnológico necesarias para manipular señales y posteriormente separarlas. En las herramientas de enseñanza matemática se resalta el estudio de funciones continuas, sistemas de ecuaciones lineales, matrices y vectores. En las herramientas ingenieriles el estudio de señales, sus representaciones (secuencias, tablas, gráficas), la BSS, y algoritmos de separación como ICA o FastICA. Como herramientas tecnológicas surge la necesidad de trabajar con software, como por ejemplo: Matlab, Wolfram Mathematica, \jupy{}, o lenguajes de programación como Python.
+
+Las herramientas matemáticas permiten modelar la mezcla de señales como un sistema de ecuaciones lineales 
+\begin{equation}\label{eq:ecu_audios_cap5}
+	\begin{split}
+		o_1(t) = a_{1,1} s_1(t) + a_{1,2} s_2(t) + a_{1,3} s_3(t)\\
+		o_2(t) = a_{2,1} s_1(t) + a_{2,2} s_2(t) + a_{2,3} s_3(t)\\
+		o_3(t) = a_{3,1} s_1(t) + a_{3,2} s_2(t) + a_{3,3} s_3(t)		
+	\end{split}
+\end{equation}
+donde las variables se representan por medio de funciones senoidales ($s_i(t)$) o combinaciones de estas ($o_i(t)$). Las componentes $a_{i,j}$ corresponden a las intensidades desde la fuente a la respectiva observación, las cuales se pueden encontrar con el estudio las características del sonido: la intensidad es inversamente proporcional al cuadrado de la distancia entre la fuente y la observación. A partir del sistema \eqref{eq:ecu_audios_cap5} se puede plantear la ecuación matricial $\mathbf{o}(t) = A \mathbf{s}(t)$, donde $A$ es la matriz de mezcla y cuya solución es única cuando $A^{-1}$ existe. 
+
+Los elementos de estudio de esta componente se asociaron a la pregunta $\mathbf{Q_2}$: \textit{¿Qué herramientas, matemáticas, ingenieriles o tecnológicas, permiten la separación de sonidos?}
+
+\paragraph{La discretización de las señales.}
+El sistema \eqref{eq:ecu_audios_cap5} no se puede solucionar directamente ya que las variables $\{s_i(t), o_i(t)| i=1,2,3 \}$ representan funciones continuas y no variables reales. Por tanto, de esta componente se derivan investigaciones sobre la transformación de señales continuas a secuencias discretas. Para la discretización de las señales utilizadas en el intervalo $[0, 10]$ se divide en $n=14700$ subintervalos iguales y el instante $t_i = \frac{i}{14700}$, $0\leq i \leq 10 \cdot 14700$.
+
+De esta manera, la representación funcional de los tonos $o_1(t)$, $o_2(t)$, $o_3(t)$, $s_1(t)$, $s_2(t)$ y $s_3(t)$ se transforman en secuencias de valores tomados  en $147000$ instantes (cada $\frac{1}{14700}$ segundos), es decir, 14700 valores por segundo durante 10 segundos. Entonces, el sistema \eqref{eq:ecu_audios_cap5} representa $147000$ sistemas de ecuaciones. La solución de estos sistemas se puede resolver por medio de software que permita la manipulación y operación de matrices y vectores.
+
+Los elementos de estudio de esta componente se asociaron a la pregunta $\mathbf{Q_3}$: \textit{¿Cómo se discretizan los tonos?}
+
+\paragraph{Mapa de preguntas-respuestas.}
+El \rei{} inició con la generación de $\mathbf{Q_0}$ y la formulación de tres sub-preguntas $\mathbf{Q_1}$, $\mathbf{Q_2}$ y $\mathbf{Q_3}$ las cuales, a su vez, ofrecieron el estudio de otras preguntas y el emergimiento de respuestas que constituyen el medio didáctico, generando un recorrido que pasa por el estudio del sonido, representación funcional de tonos puros y compuestos, sistemas de ecuaciones lineales para representar la mezcla de tonos, ecuaciones matriciales y uso de la matriz inversa para representar la solución del sistema, discretización de funciones continuas y solución de sistemas de ecuaciones lineales instantáneos por medio de software. El siguiente mapa P-R presenta un esquema del análisis \textit{a priori} de \rei.
+\newpage
+
+\begin{figure}[H]
+	\caption{Mapa P-R. Análisis a priori} \label{fig:mapaP_Q_apriori}
+	\centering
+	\includegraphics[width=\textwidth]{Graphviz/Q_A}\\		
+	\small \raggedright \textit{Fuente}: elaboración propia.
+\end{figure}
+
+\paragraph{Situación propuesta a los estudiantes.}
+A partir de la pregunta generatriz \hyperlink{Q.0ini}{$\mathbf{Q_0}$}, de las componentes y preguntas asociadas a ésta, se propuso una situación donde se utilizan tres sonidos mezclados con el fin de identificar el proceso que permite separarlos. Los sonidos se representan mediante obras musicales interpretadas por tres músicos, y la mezcla se da cuando tres personas los escuchan \textit{al tiempo} desde tres posiciones. Así, cada persona está escuchando las tres obras de manera diferente, dando como resultado los audios mezclados que se quieren separar para identificar qué obra interpreta cada músico:
+
+Suponga que usted y dos amigos más ingresan a un concierto de música clásica, como compraron las boletas a última hora, no consiguieron sillas juntas y se acomodaron separados en las pocas sillas que quedaban.
+		
+Antes de iniciar el concierto los músicos calientan y afinan sus instrumentos, por lo que se escuchan algunas melodías durante unos minutos.
+		
+Los siguientes audios corresponden a un fragmento de 10 segundos que cada uno escuchó desde la posición en donde estaba sentado.
+		
+\url{https://bit.ly/REI\_mezcla1} - \url{https://bit.ly/REI\_mezcla2} - \url{https://bit.ly/REI\_mezcla3}
+
+
+
+\section{Esquema de gestión}
+
+Con el fin de sistematizar las actividades a desarrollar durante la experimentación del \rei{} y la construcción o reconstrucción de la Pe-BSS, se escogieron cuatro fases de trabajo durante el recorrido, para cada una de ellas se propuso la secuencia ilustrada en la Figura \ref{fig:secuencia_gestion}. Donde se inicia con la propuesta de preguntas interesantes, a partir de estas el equipo docente diseña o re-diseña las actividades o aplicativos que permitan su investigación o exploración. Los estudiantes de manera individual, en pequeños equipos o en reuniones con todo el grupo desarrollan las actividades y consolidan sus respuestas en participaciones o informes, los cuales se presentan en consenso a todo el grupo, se institucionalizan las respuestas halladas y nuevamente se formulan preguntas relevantes para continuar con el proceso de estudio.
+
+\begin{figure}[H]
+	\caption{Organización propuesta para cada fase.}\label{fig:secuencia_gestion}
+	\centering
+	\includegraphics[width=8cm]{Graphviz/secuencia_gestion.dot}\\		
+	\small \raggedright \textit{Fuente}: elaboración propia.
+\end{figure}
+
+\section{Elementos propuestos para del medio didáctico}
+
+La TAD justifica que el medio didáctico $M$ se representa como el conjunto de las \textit{respuestas ``selladas''} y las \textit{obras}:
+
+$$M=\{ R^\diamondsuit_1, R^\diamondsuit_2, R^\diamondsuit_3, ..., R^\diamondsuit_n, ..., O_{n+1}, O_{n+2}, ..., O_m\}$$
+
+\noindent con el cual se logra construir y justificar $R^\heartsuit$. El REI se representa por medio del \textit{esquema herbartiano}:
+
+$$[S(X; Y; Q)\rhookrightarrow \{ R^\diamondsuit_1, R^\diamondsuit_2, R^\diamondsuit_3, ..., R^\diamondsuit_n, ..., O_{n+1}, O_{n+2}, ..., O_m\}]\hookrightarrow R^\heartsuit$$
+
+Donde $M$ se construye con el proceso en cadena de cuestiones y respuestas; ya sean construidas y validadas por la comunidad, o construidas por $[S(X; Y)]$, por ejemplo: las que se obtienen de libros, páginas web, artículos de investigación y difusión, las respuestas del equipo de docentes, o las respuestas consolidadas en reuniones grupales. 
+
+En general, aunque $M$ no suele ser concebido a priori, debido a la complejidad de la pregunta inicial se consideró necesario generar elementos del medio; específicamente, la elección de un video de apoyo para reflexionar sobre las mezclas de sonidos y la manera como los separamos, y algunos aplicativos para explorar y manipular señales mediante sus representaciones gráficas y auditivas. El uso de estos aplicativos ayudará que los estudiantes validen sus hipótesis de manera experimental y aportará a la construcción de las tres componentes identificadas en el proceso de respuesta de $Q_0$: el sonido y sus características, las herramientas para la separación y manipulación de señales, y la discretización de las señales.
+
+De esta manera, el REI se puede representar con el \textit{esquema herbatiano ampliado}:
+
+$$[S(X; Y; Q)\rhookrightarrow \{ R^\diamondsuit_1, R^\diamondsuit_2, R^\diamondsuit_3, ..., R^\diamondsuit_n, O_{n+1}, ..., O_m, A_i, A_{i+1}, ..., A_j\}]\hookrightarrow R^\heartsuit$$
+
+Se escoge desarrollar los aplicativos en \jupy{} bajo el código de programación de Python ya que son de uso libre y Python es un lenguaje de programación reconocido mundialmente con múltiples librerías que permiten el trabajo con matrices, señales y sonidos, entre otros. Esto permite que los estudiantes puedan no solo utilizar los aplicativo, sino el poder modificarlos y/o construir herramientas con las que se pueden dar respuesta a la pregunta $Q_0$.
+
+\begin{figure}[H]
+	\caption{Cuaderno \jupy{} y aplicativos para el REI} \label{fig:aplicativos}
+	\centering
+	\includegraphics[width=\textwidth]{cap5/aplicativos}\\		
+	\small \raggedright \textit{Fuente}: elaboración propia.
+\end{figure}
+
+\section{Fases de trabajo en el \rei{}}
+
+Para sistematizar el desarrollo y construcción de la Pe-BSS, se propusieron cuatro fases de trabajo basadas en los \textit{momentos de estudio}, donde se implementan actividades individuales, por equipo y grupales mediante foros de discusión, encuentros sincrónicos moderados por los docentes y la entrega de informes que evidencien el avance hacia la respuesta de \hyperlink{Q.0ini}{$\mathbf{Q_0}$}.
+
+\paragraph{Fase 1} 
+Corresponde al primer encuentro con el \textbf{tipo de tarea} ($T$): \textit{modelar una mezcla simulada de tres melodías producidas por tres instrumentos, ubicados arbitrariamente}; y al inicio del desarrollo de la \textbf{técnica} ($\tau$), descrita en los literales \textbf{a.} \textit{Asociar los sonidos recuperados con las mezclas de tres instrumentos sonando al mismo tiempo}, y \textbf{b.} \textit{Determinar las características de las mezclas y de sus componentes}. Se genera un primer encuentro con la mezcla de sonidos mediante el video The science of hearing'' (\url{https://youtu.be/LkGOGzpbrCk}), enfocado en la habilidad del cerebro para filtrar y ubicar sonidos. Se proponen las siguientes preguntas de discusión: ¿qué hace el cerebro ante la presencia de sonidos? y ¿qué estrategias o herramientas se utilizan en la actualidad para separar sonidos? (figura \ref{fig:1.1.Foro1_1}), en el análisis preliminar se reconoció la dificultad de separar e identificar los sonidos, por tanto, la discusión centra en los conceptos, características del sonido y las herramientas matemáticas, ingenieriles o tecnológicas que se pueden utilizar para separar las mezclas.
+
+\begin{figure}[H]
+	\caption{Primer encuentro con el tipo de tarea} \label{fig:1.1.Foro1_1}
+	\centering
+	\includegraphics[width=\textwidth]{cap6/1.1.Foro1}\\		
+	\small \raggedright \textit{Fuente}: elaboración propia.
+\end{figure}
+
+
+Esta fase es abierta, inicialmente se propone un trabajo individual mediante el foro de discusión donde los estudiantes deben participar reflexionando sobre las preguntas planteadas y comenzar a construir elementos del medio a partir de fuentes de información. Se espera que luego de la participación inicial se desarrollen intervenciones a las participaciones de los compañeros con miras a complementarlas o dialogar sobre sus reflexiones. Una vez cerrado el foro se se propone una sesión sincrónica con todo el equipo donde se consolide el desarrollo de la actividad y se presente la situación que se quiere explorar:
+
+\begin{center}
+	\fbox{\begin{minipage}[c]{\linewidth}
+	Suponga que usted y dos amigos más ingresan a un concierto de música clásica, como compraron las boletas a última hora, no consiguieron sillas juntas y se acomodaron separados en las pocas sillas que quedaban.
+	
+	Antes de iniciar el concierto los músicos calientan y afinan sus instrumentos, por lo que se escuchan algunas melodías durante unos minutos.
+	
+	Los siguientes audios corresponden a un fragmento de 10 segundos que cada uno escuchó desde la posición en donde estaba sentado.
+	
+	\url{https://bit.ly/REI\_mezcla1} - \url{https://bit.ly/REI\_mezcla2} - \url{https://bit.ly/REI\_mezcla3}
+					
+\end{minipage}}
+\end{center}
+
+
+\paragraph{Fase 2} 
+Corresponde al momento exploratorio y al trabajo con la \textbf{técnica} ($\tau$), descrita en \textbf{c.} \textit{Estudiar las distancias e intensidades entre las fuentes y observaciones} y \textbf{d.} \textit{Expresar mediante combinaciones lineales la relación entre la fuentes y observaciones}. Para la exploración de las señales se diseñó un recurso digital que simula la ubicación de tres parlantes (fuentes) y tres grabadoras (observaciones), las fuentes emiten \textbf{tres tonos puros} de frecuencias diferentes y las observaciones reciben la mezcla de los tonos puros (figura \ref{aplicativo_1}), el recurso presenta las representaciones gráfica, tabular y auditiva de cada señal. 
+
+Debido a que los audios originales son producto de la mezcla de obras musicales, para esta fase se decide utilizar tonos puros, ya que son señales más sencillas de entender, modelar y manipular, se espera que las investigaciones referentes al sonido y sus características aporten al estudio de los tonos puros y que los estudiantes entiendan que su papel es simplificar el proceso de modelado para explorarlo, entenderlo y utilizarlo. Una vez solucionado el problema de mezcla de tonos puros se puede adaptar el modelo a la mezcla de sonidos.
+
+En el aplicativo, elemento clave del medio, propuesto por los docentes se puede cambiar la ubicación de las fuentes y  observaciones, escuchar las mezclas que se generan, y ver sus respectivas representaciones tabulares y gráficas. A partir de esta exploración se anticiparon cuestiones derivadas sobre los elementos que intervienen en la mezcla: la frecuencia de los tonos, las ubicaciones, distancias, intensidades, representaciones funcionales de los tonos, el uso de matrices y de ecuaciones lineales, entre otros.
+	
+\begin{figure}[H]
+	\caption{Aplicativo de experimentación para la fase 2} \label{aplicativo_1}
+	\centering
+	\includegraphics[width=\textwidth]{cap6/1.1.Foro3.Actividad2.aplicativo}\\		
+	\small \raggedright \textit{Fuente}: elaboración propia.
+\end{figure}
+
+Esta fase no es completamente abierta y se propone el trabajo por equipos, donde cada estudiante pueda experimentar y comunicar a los otros compañeros sus avances, se espera que las investigaciones y participaciones de los integrantes del equipo permitan modelar las mezclas por medio de un sistema del ecuaciones lineales \eqref{eq:ecu_audios_cap5} donde $o_1(t)$, $o_2(t)$ y $o_3(t)$ representan las funciones de tonos compuestos (dadas por las observaciones), $s_1(t)$, $s_2(t)$ y $s_3(t)$ representan los funciones de los tonos puros a recuperar (dadas por las fuentes), y $a_{i,j}$ representan las intensidades entre las fuentes y observaciones. Las investigaciones sobre cómo solucionar el sistema \eqref{eq:ecu_audios_cap5} se consolidan nuevamente en un encuentro sincrónico para todo el grupo cuyas reflexiones deben permitir desencadenar más preguntas y dar inicio a la siguiente fase.
+
+Esta fase es semi-abierta ya que el uso del aplicativo como parte del medio está centrando la actividad en encontrar el modelo de separación para los tonos compuestos con el objetivo de poder adaptar luego este a las mezclas de melodías.
+
+
+\paragraph{Fase 3} 
+Corresponde al momento de trabajo con la \textbf{técnica} ($\tau$), descrita en el literal \textbf{e.} \textit{Identificar la matriz de mezcla y encontrar la inversa}. Nuevamente por equipos los estudiantes continúan con sus investigaciones y experimentos, el objetivo ahora es discutir, adaptar y utilizar técnicas que permitan modelar cualquier configuración de fuentes-observaciones por medio de sistemas de ecuaciones lineales. Para el desarrollo de la técnica a cada equipo se le entrega una configuración específica: la ubicación de las fuentes y observaciones en una sala de medida variable (figura \ref{conf_1}). La actividad se centra en identificar y representar el modelo de la configuración particular, para esto se debe encontrar las distancias, intensidades, formular el sistema de ecuaciones lineales e intentar separar las mezclas.
+
+Esta fase se diseña limitada a una actividad concreta, pero cuya forma de resolver no es única y fomenta el trabajo en equipo para poder entender la técnica y utilizarla de manera correcta.
+
+\begin{figure}[H]
+	\caption{Ejemplo de una configuración de fuentes-observaciones para trabajar con la técnica} \label{conf_1}
+	\centering
+	\includegraphics[width=12cm]{cap5/conf_1}\\		
+	\small \raggedright \textit{Fuente}: elaboración propia.
+\end{figure}
+
+Después del trabajo con la técnica para modelar mezclas a partir de sistemas de ecuaciones lineales se propone un encuentro sincrónico para la puesta en común  y revisar los avances de los equipos. El siguiente paso es investigar maneras de resolver un sistema de ecuaciones lineales asociado a una configuración específica. Se reconocen dos vertientes a explorar, por un lado lo referente a las formas de solucionar los sistemas, por ejemplo, representándolos como un sistema matricial $\mathbf{o}(t) =A \mathbf{s}(t)$ y usando la matriz inversa para encontrar la solución, o por medio de la solución Gauss-Jordan, y por otro, lo referente a la discretización de las señales (variables del sistema).
+
+\paragraph{Fase 4} 
+Corresponde al momento de trabajo con la \textbf{técnica} ($\tau$), descrita en el literal \textbf{f.} \textit{Resolver los sistemas de ecuaciones correspondientes a las señales discretizadas},  y al momento de institucionalización. El desarrollo de esta fase se realiza nuevamente en equipos y se centra en la investigación sobre la discretización de funciones continuas: utilizando nuevamente el aplicativo de la fase 2 (figura \ref{aplicativo_1}) el cual representa las funciones mezcla discretizadas mediante una tabla de los valores. Se anticipa que las investigaciones permitan a los estudiantes entender la representación tabular de las señales en función de su discretización dado un intervalo pequeño de tiempo. De esta manera, para cada instante $t_i$, se tiene el sistema instantáneo
+\begin{equation}\label{eq:ecu_audios}
+	\begin{split}
+		o_1(t_i) = a_{1,1} s_1(t_i) + a_{1,2} s_2(t_i) + a_{1,3} s_3(t_i)\\
+		o_2(t_i) = a_{2,1} s_1(t_i) + a_{2,2} s_2(t_i) + a_{2,3} s_3(t_i)\\
+		o_3(t_i) = a_{3,1} s_1(t_i) + a_{3,2} s_2(t_i) + a_{3,3} s_3(t_i)
+	\end{split}
+\end{equation}
+
+\noindent donde $o_1(t_i)$, $o_2(t_i)$ y $o_3(t_i)$ corresponden a los valores de las mezclas, $a_{i,j}$, $s_1(t_i)$, $s_2(t_i)$ y $s_3(t_i)$ son las soluciones que se quieren encontrar al resolver el sistema de ecuaciones para instante $t_i$ y $a_{i,j}$ son las respectivas intensidades.
+
+Se resalta la importancia de entender el sistema hallado en la fase anterior como una \textit{familia de sistemas} que dependen de los valores que $o_1(t_i)$, $o_2(t_i)$ y $o_3(t_i)$ tengan en el instante $t_i$. Para la solución de un sistema lineal se puede utilizar la reducción Gauss-Jordan, pero al ser miles de sistemas los que se debe resolver ésta técnica resulta poco eficiente, por tanto, se deben investigar otras que permitan resolver de manera eficaz múltiples sistemas de ecuaciones lineales, por ejemplo, representándolos como un sistema matricial $\mathbf{o}(t_i) =A \mathbf{s}(t_i)$ donde la matriz de mezcla $A$ es constante y si es invertible, entonces la solución se puede encontrar usando su inversa multiplicándola por cada $\mathbf{o}(t_i)$, es decir: $\mathbf{s}(t_i) = A^{-1}\mathbf{o}(t_i)$. 
+
+Aunque sean miles de multiplicaciones un computador puede desarrollarlas en cuestión de segundos, encontrando la solución de $\mathbf{s}(t_i)$ para cada instante $t_i$.
+
+Se espera que algunos estudiantes investiguen el uso de herramientas tecnológicas para solucionar sistemas de ecuaciones lineales y experimenten con algoritmos de BSS como por ejemplo FastICA. Ya que toda la actividad se está desarrollando en cuadernos de \jupy{}, ellos pueden adaptar algoritmos escritos en código Python o escribir algoritmos propios que permitan separar las mezclas e incluso escuchar las mezclas separadas.
+
+La institucionalización se concentra con el encuentro sincrónico donde se evidencia el proceso de construcción del medio y la respuesta producto del consenso grupal: las preguntas derivadas, respuestas existentes encontradas en las diferentes fuentes de investigación, los conceptos aprendidos que se profundizaron en cada fase, que se usaron sin detallar y los que aparecieron producto de las investigaciones pero que no se usaron en este \rei{}.
+
+\section{Consideraciones finales}
+Este diseño de \rei{} y análisis a \textit{priori} permitió anticipar algunas cuestiones derivadas de \hyperlink{Q.0i}{$\mathbf{Q_0}$} para cada fase, la propuesta de elementos iniciales del medio, como el video y los aplicativos, y la forma en que estos podían ser utilizados para estudiar $Q_0$ y desencadenar las preguntas y respuestas. La figura \ref{fig:EsquemaApriori} presenta un esquema de este diseño. {\color{red} REVISAR LA IMAGEN}
+
+\begin{figure}[H]
+	\caption{Posibles preguntas. Análisis a priori}\label{fig:EsquemaApriori}
+	\centering
+	\includegraphics[width=\textwidth]{cap5/esquema_apriori}\\		
+	\small \raggedright \textit{Fuente}: elaboración propia.
+\end{figure}
+
+Para el estudio del diseño generado en este apartado, el contraste con la experimentación y la interpretación del análisis a posteriori del \rei{}, se recopilan diferentes datos de estudio los cuales constan de las participaciones de los estudiantes en los foros (individual o en equipos), las grabaciones de los encuentros sincrónicos, la pizarra electrónica donde se toman apuntes en estos y la entrega de los informes finales de cada actividad. 
+

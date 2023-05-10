@@ -1,0 +1,32 @@
+\input{encabezado}
+\begin{document}
+	\pagenumbering{roman}
+	%\include{HojaTitulo/HojaTitulo}
+	
+	\renewcommand{\bibname}{REFERENCIAS}
+	\renewcommand{\tablename}{\textbf{Tabla}}
+	\renewcommand{\figurename}{\textbf{Figura}}
+	\renewcommand{\listtablename}{Lista de Tablas}
+	\renewcommand{\listfigurename}{Lista de Figuras}
+	\renewcommand{\contentsname}{Contenido}
+	
+	%\listoffigures
+	\tableofcontents
+	
+	\pagenumbering{arabic}
+	
+	%\include{intro}
+	\include{cap1/cap1}
+	\include{cap2/cap2}
+	\include{cap3/cap3}
+	\include{cap4/cap4}	
+	\include{cap5/cap5}
+	\include{cap6/cap6}
+	\include{cap7/cap7}
+	\include{cap7/cap7.t.2}
+	
+	\printbibliography[heading=bibintoc]	
+
+	
+	
+\end{document}
